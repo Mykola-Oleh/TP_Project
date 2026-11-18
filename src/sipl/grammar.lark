@@ -1,0 +1,29 @@
+// SIPL grammar based on Shyshatska et al., Practical handbook (2024), pp. 8–9.
+// Precedence/associativity disambiguation follows Nikitchenko, pp. 9–10.
+// A program MUST be a nonempty begin/end block; no trailing semicolon.
+start: "begin" statement "end" -> program
+?statement: simple_statement (";" simple_statement)* -> sequence
+?simple_statement: assignment | skip | conditional | loop | block
+assignment: NAME ":=" expr
+skip: "skip"
+conditional: "if" condition "then" simple_statement "else" simple_statement
+loop: "while" condition "do" simple_statement
+block: "begin" statement "end"
+?condition: disjunction
+?disjunction: negation ("∨" negation)* -> or_expr
+?negation: "¬" negation -> not_expr
+         | comparison
+?comparison: expr COMP expr -> compare
+           | "(" condition ")" -> grouped_condition
+?expr: sum
+?sum: product (ADD_OP product)* -> sum_expr
+?product: atom ("*" atom)* -> product_expr
+?atom: NUMBER -> number
+     | NAME -> variable
+     | "(" expr ")" -> grouped_expr
+COMP: "=" | ">"
+ADD_OP: "+" | "-"
+NAME: /(?!begin\b|end\b|if\b|then\b|else\b|while\b|do\b|skip\b)[A-Za-z_][A-Za-z0-9_]*/
+NUMBER: /-?[0-9]+/
+%import common.WS
+%ignore WS
