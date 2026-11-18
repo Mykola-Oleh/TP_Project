@@ -1,6 +1,3 @@
-// SIPL grammar based on Shyshatska et al., Practical handbook (2024), pp. 8–9.
-// Precedence/associativity disambiguation follows Nikitchenko, pp. 9–10.
-// A program MUST be a nonempty begin/end block; no trailing semicolon.
 start: "begin" statement "end" -> program
 ?statement: simple_statement (";" simple_statement)* -> sequence
 ?simple_statement: assignment | skip | conditional | loop | block
