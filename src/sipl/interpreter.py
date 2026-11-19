@@ -1,11 +1,9 @@
-"""Execution of the core SIPL language over integer-valued states."""
 from collections.abc import Mapping, Callable
 from dataclasses import dataclass
 from . import ast
 
 
 class ExecutionError(RuntimeError):
-    """Runtime error tied to a source location."""
     def __init__(self, message: str, location: ast.SourceSpan):
         self.location = location
         super().__init__(f"Runtime error at {location.line}:{location.column}: {message}")
@@ -19,7 +17,6 @@ class StepLimitExceeded(ExecutionError):
 class ExecutionResult:
     state: dict[str, int]
     steps: int
-
 
 class Interpreter:
     def __init__(self, state: Mapping[str, int] | None = None, max_steps: int = 10000,
@@ -77,7 +74,6 @@ class Interpreter:
         raise ExecutionError("unsupported expression", node.span)
 
     def execute(self, node: ast.Statement):
-        # Structural blocks do not consume a step (same behavior as stage 2).
         if isinstance(node, ast.Block):
             for statement in node.statements:
                 self.execute(statement)
@@ -120,7 +116,6 @@ class Interpreter:
             raise
         self._emit("ExecutionFinished", node, status="success")
         return ExecutionResult(dict(self.state), self.steps)
-
 
 def run(source: str, state: Mapping[str, int] | None = None, max_steps: int = 10000) -> ExecutionResult:
     from .parser import parse

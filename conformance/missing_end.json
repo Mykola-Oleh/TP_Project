@@ -1,0 +1,10 @@
+{
+  "id": "missing_end",
+  "source": "begin X := 1",
+  "mode": "error",
+  "initial": {},
+  "expect": {
+    "exit_code": 3,
+    "type": "SyntaxError"
+  }
+}

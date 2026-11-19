@@ -1,0 +1,39 @@
+{
+  "id": "ast_if",
+  "source": "begin if X > 0 then skip else Y := 2 end",
+  "mode": "ast",
+  "initial": {},
+  "expect": {
+    "shape": {
+      "type": "Block",
+      "statements": [
+        {
+          "type": "If",
+          "condition": {
+            "type": "Binary",
+            "op": ">",
+            "left": {
+              "type": "Variable",
+              "name": "X"
+            },
+            "right": {
+              "type": "Number",
+              "value": 0
+            }
+          },
+          "then_branch": {
+            "type": "Skip"
+          },
+          "else_branch": {
+            "type": "Assign",
+            "name": "Y",
+            "value": {
+              "type": "Number",
+              "value": 2
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "while_zero",
+  "source": "begin while X > 0 do X := X - 1 end",
+  "mode": "run",
+  "initial": {
+    "X": 0
+  },
+  "expect": {
+    "state": {
+      "X": 0
+    },
+    "steps": 1
+  }
+}

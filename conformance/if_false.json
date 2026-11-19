@@ -1,0 +1,15 @@
+{
+  "id": "if_false",
+  "source": "begin if X > 0 then Y := 1 else Y := 2 end",
+  "mode": "run",
+  "initial": {
+    "X": 0
+  },
+  "expect": {
+    "state": {
+      "X": 0,
+      "Y": 2
+    },
+    "steps": 2
+  }
+}

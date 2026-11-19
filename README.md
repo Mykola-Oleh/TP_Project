@@ -47,7 +47,8 @@ Trace виводить JSON із `result` (`state`, `steps`) та масивом
 
 ## Етап 4 — CORE-05: стабільний CLI (1 бал)
 
-CLI підтримує `check`, `parse`, `run`, `trace`, а також `--json`, `--var NAME=INTEGER` та `--max-steps N`.
+CLI підтримує `check`, `parse`, `run`, `trace`, а також `--json`, `--var NAME=INTEGER`
+(можна повторювати) та `--max-steps N`.
 
 ### Контракт JSON v1.0
 
@@ -91,3 +92,53 @@ CLI підтримує `check`, `parse`, `run`, `trace`, а також `--json`,
 
 `tests/test_cli.py` запускає CLI у дочірньому процесі, перевіряє stdout,
 JSON-поля, коди завершення та повідомлення про помилки.
+
+**Обмеження контракту:** JSON v1.0 фіксує структуру відповіді CLI; формат
+внутрішнього AST та подій trace може бути уточнений у наступних версіях.
+
+
+## Етап 5 — CORE-06 + VIS-01 (2.5 бала)
+
+### Незалежний conformance suite (CORE-06)
+
+Файли `conformance/*.json` — тестові випадки з **вхідною SIPL-програмою**, початковим станом,
+режимом (`run`, `ast`, `error`) та заздалегідь заданими очікуваннями.
+Сценарій `conformance/run_suite.py` викликає лише публічний CLI через окремий процес;
+він не імпортує реалізацію парсера або інтерпретатора. Його можна запускати
+проти іншої реалізації, якщо вона підтримує CLI `parse`/`run` і JSON-протокол версії 1.0.
+
+```powershell
+py conformance/run_suite.py
+py conformance/run_suite.py --command sipl
+```
+
+У режимі `run` порівнюються `state` і `steps`; у `error` — код завершення й тип помилки;
+у `ast` — структурна форма AST. Усі тести незалежні.
+
+### Дерево синтаксичного виводу (VIS-01)
+
+Команда `visualize` будує **конкретне дерево розбору Lark** (не AST) і експортує
+його в Text, JSON, DOT та SVG. Кожен вузол має `line`, `column`, `end_line`,
+`end_column` для зв'язку з фрагментом джерела.
+
+Особливості:
+- Відображення терміналів і нетерміналів.
+- Червона нумерація термінальних символів.
+- Чорні стрілки між вузлами дерева.
+- Послідовність терміналів під деревом.
+- Відображення вихідного коду SIPL праворуч.
+- Генерація SVG без встановлення Graphviz.
+
+Для створення дерева:
+```powershell
+py -m sipl.cli visualize examples/gcd.sipl --format derivation-svg --output derivation.svg
+```
+
+Для експорту у DOT:
+```powershell
+py -m sipl.cli visualize examples/gcd.sipl --format derivation-dot --output derivation.dot
+```
+
+Звичайні формати `text`, `json`, `dot`, `svg` також залишаються доступними.
+
+

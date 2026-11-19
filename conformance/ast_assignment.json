@@ -1,0 +1,21 @@
+{
+  "id": "ast_assignment",
+  "source": "begin X := 7 end",
+  "mode": "ast",
+  "initial": {},
+  "expect": {
+    "shape": {
+      "type": "Block",
+      "statements": [
+        {
+          "type": "Assign",
+          "name": "X",
+          "value": {
+            "type": "Number",
+            "value": 7
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "assignment",
+  "source": "begin X := 2 + 3 * 4 end",
+  "mode": "run",
+  "initial": {},
+  "expect": {
+    "state": {
+      "X": 14
+    },
+    "steps": 1
+  }
+}

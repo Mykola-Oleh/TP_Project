@@ -1,0 +1,10 @@
+{
+  "id": "undefined_variable",
+  "source": "begin X := Y end",
+  "mode": "error",
+  "initial": {},
+  "expect": {
+    "exit_code": 4,
+    "type": "RuntimeError"
+  }
+}

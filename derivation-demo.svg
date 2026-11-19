@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2722" height="906" viewBox="0 0 2722 906">
+<rect width="100%" height="100%" fill="white"/>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#111"/></marker></defs>
+<g font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#111">
+<line x1="1084.0" y1="58.0" x2="34.0" y2="114.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="1084.0" y1="58.0" x2="716.5" y2="114.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="1084.0" y1="58.0" x2="2134.0" y2="114.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1084.0" y="45.0" text-anchor="middle">&lt;program&gt;</text>
+<text x="34.0" y="130.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">1</tspan><tspan dx="5">begin</tspan></text>
+<line x1="716.5" y1="143.0" x2="118.0" y2="199.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="716.5" y1="143.0" x2="328.0" y2="199.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="716.5" y1="143.0" x2="706.0" y2="199.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="716.5" y1="143.0" x2="1315.0" y2="199.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="716.5" y="130.0" text-anchor="middle">&lt;statement&gt;</text>
+<text x="118.0" y="215.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">2</tspan><tspan dx="5">while</tspan></text>
+<line x1="328.0" y1="228.0" x2="202.0" y2="284.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="328.0" y1="228.0" x2="454.0" y2="284.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="328.0" y="215.0" text-anchor="middle">&lt;condition&gt;</text>
+<text x="202.0" y="300.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">3</tspan><tspan dx="5">¬</tspan></text>
+<line x1="454.0" y1="313.0" x2="286.0" y2="369.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="454.0" y1="313.0" x2="454.0" y2="369.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="454.0" y1="313.0" x2="622.0" y2="369.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="454.0" y="300.0" text-anchor="middle">&lt;condition&gt;</text>
+<text x="286.0" y="385.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">4</tspan><tspan dx="5">(</tspan></text>
+<line x1="454.0" y1="398.0" x2="370.0" y2="454.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="454.0" y1="398.0" x2="454.0" y2="454.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="454.0" y1="398.0" x2="538.0" y2="454.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="454.0" y="385.0" text-anchor="middle">&lt;condition&gt;</text>
+<line x1="370.0" y1="483.0" x2="370.0" y2="539.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="370.0" y="470.0" text-anchor="middle">&lt;variable&gt;</text>
+<text x="370.0" y="555.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">5</tspan><tspan dx="5">M</tspan></text>
+<text x="454.0" y="470.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">6</tspan><tspan dx="5">=</tspan></text>
+<line x1="538.0" y1="483.0" x2="538.0" y2="539.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="538.0" y="470.0" text-anchor="middle">&lt;variable&gt;</text>
+<text x="538.0" y="555.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">7</tspan><tspan dx="5">N</tspan></text>
+<text x="622.0" y="385.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">8</tspan><tspan dx="5">)</tspan></text>
+<text x="706.0" y="215.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">9</tspan><tspan dx="5">do</tspan></text>
+<line x1="1315.0" y1="228.0" x2="790.0" y2="284.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="1315.0" y1="228.0" x2="958.0" y2="284.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="1315.0" y1="228.0" x2="1126.0" y2="284.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="1315.0" y1="228.0" x2="1336.0" y2="284.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="1315.0" y1="228.0" x2="1630.0" y2="284.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="1315.0" y1="228.0" x2="1840.0" y2="284.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1315.0" y="215.0" text-anchor="middle">&lt;statement&gt;</text>
+<text x="790.0" y="300.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">10</tspan><tspan dx="5">if</tspan></text>
+<line x1="958.0" y1="313.0" x2="874.0" y2="369.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="958.0" y1="313.0" x2="958.0" y2="369.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="958.0" y1="313.0" x2="1042.0" y2="369.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="958.0" y="300.0" text-anchor="middle">&lt;condition&gt;</text>
+<line x1="874.0" y1="398.0" x2="874.0" y2="454.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="874.0" y="385.0" text-anchor="middle">&lt;variable&gt;</text>
+<text x="874.0" y="470.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">11</tspan><tspan dx="5">M</tspan></text>
+<text x="958.0" y="385.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">12</tspan><tspan dx="5">&gt;</tspan></text>
+<line x1="1042.0" y1="398.0" x2="1042.0" y2="454.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1042.0" y="385.0" text-anchor="middle">&lt;variable&gt;</text>
+<text x="1042.0" y="470.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">13</tspan><tspan dx="5">N</tspan></text>
+<text x="1126.0" y="300.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">14</tspan><tspan dx="5">then</tspan></text>
+<line x1="1336.0" y1="313.0" x2="1210.0" y2="369.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="1336.0" y1="313.0" x2="1294.0" y2="369.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="1336.0" y1="313.0" x2="1462.0" y2="369.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1336.0" y="300.0" text-anchor="middle">&lt;statement&gt;</text>
+<line x1="1210.0" y1="398.0" x2="1210.0" y2="454.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1210.0" y="385.0" text-anchor="middle">&lt;variable&gt;</text>
+<text x="1210.0" y="470.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">15</tspan><tspan dx="5">M</tspan></text>
+<text x="1294.0" y="385.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">16</tspan><tspan dx="5">:=</tspan></text>
+<line x1="1462.0" y1="398.0" x2="1462.0" y2="454.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1462.0" y="385.0" text-anchor="middle">&lt;expression&gt;</text>
+<line x1="1462.0" y1="483.0" x2="1378.0" y2="539.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="1462.0" y1="483.0" x2="1462.0" y2="539.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="1462.0" y1="483.0" x2="1546.0" y2="539.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1462.0" y="470.0" text-anchor="middle">&lt;expression&gt;</text>
+<line x1="1378.0" y1="568.0" x2="1378.0" y2="624.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1378.0" y="555.0" text-anchor="middle">&lt;expression&gt;</text>
+<line x1="1378.0" y1="653.0" x2="1378.0" y2="709.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1378.0" y="640.0" text-anchor="middle">&lt;variable&gt;</text>
+<text x="1378.0" y="725.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">17</tspan><tspan dx="5">M</tspan></text>
+<text x="1462.0" y="555.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">18</tspan><tspan dx="5">-</tspan></text>
+<line x1="1546.0" y1="568.0" x2="1546.0" y2="624.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1546.0" y="555.0" text-anchor="middle">&lt;expression&gt;</text>
+<line x1="1546.0" y1="653.0" x2="1546.0" y2="709.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1546.0" y="640.0" text-anchor="middle">&lt;variable&gt;</text>
+<text x="1546.0" y="725.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">19</tspan><tspan dx="5">N</tspan></text>
+<text x="1630.0" y="300.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">20</tspan><tspan dx="5">else</tspan></text>
+<line x1="1840.0" y1="313.0" x2="1714.0" y2="369.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="1840.0" y1="313.0" x2="1798.0" y2="369.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="1840.0" y1="313.0" x2="1966.0" y2="369.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1840.0" y="300.0" text-anchor="middle">&lt;statement&gt;</text>
+<line x1="1714.0" y1="398.0" x2="1714.0" y2="454.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1714.0" y="385.0" text-anchor="middle">&lt;variable&gt;</text>
+<text x="1714.0" y="470.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">21</tspan><tspan dx="5">N</tspan></text>
+<text x="1798.0" y="385.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">22</tspan><tspan dx="5">:=</tspan></text>
+<line x1="1966.0" y1="398.0" x2="1966.0" y2="454.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1966.0" y="385.0" text-anchor="middle">&lt;expression&gt;</text>
+<line x1="1966.0" y1="483.0" x2="1882.0" y2="539.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="1966.0" y1="483.0" x2="1966.0" y2="539.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<line x1="1966.0" y1="483.0" x2="2050.0" y2="539.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1966.0" y="470.0" text-anchor="middle">&lt;expression&gt;</text>
+<line x1="1882.0" y1="568.0" x2="1882.0" y2="624.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1882.0" y="555.0" text-anchor="middle">&lt;expression&gt;</text>
+<line x1="1882.0" y1="653.0" x2="1882.0" y2="709.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="1882.0" y="640.0" text-anchor="middle">&lt;variable&gt;</text>
+<text x="1882.0" y="725.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">23</tspan><tspan dx="5">N</tspan></text>
+<text x="1966.0" y="555.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">24</tspan><tspan dx="5">-</tspan></text>
+<line x1="2050.0" y1="568.0" x2="2050.0" y2="624.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="2050.0" y="555.0" text-anchor="middle">&lt;expression&gt;</text>
+<line x1="2050.0" y1="653.0" x2="2050.0" y2="709.0" stroke="#111" stroke-width="1.15" marker-end="url(#arrow)"/>
+<text x="2050.0" y="640.0" text-anchor="middle">&lt;variable&gt;</text>
+<text x="2050.0" y="725.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">25</tspan><tspan dx="5">M</tspan></text>
+<text x="2134.0" y="130.0" text-anchor="middle"><tspan fill="#df1717" font-weight="bold">26</tspan><tspan dx="5">end</tspan></text>
+<line x1="20" y1="801.0" x2="2232.0" y2="801.0" stroke="#ddd"/>
+<text x="24" y="822.0" font-size="13" font-weight="bold">Terminal sequence</text>
+<text x="24.0" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">1</tspan><tspan dx="4">begin</tspan></text>
+<text x="92.5" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">2</tspan><tspan dx="4">while</tspan></text>
+<text x="161.0" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">3</tspan><tspan dx="4">¬</tspan></text>
+<text x="206.0" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">4</tspan><tspan dx="4">(</tspan></text>
+<text x="251.0" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">5</tspan><tspan dx="4">M</tspan></text>
+<text x="296.0" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">6</tspan><tspan dx="4">=</tspan></text>
+<text x="341.0" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">7</tspan><tspan dx="4">N</tspan></text>
+<text x="386.0" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">8</tspan><tspan dx="4">)</tspan></text>
+<text x="431.0" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">9</tspan><tspan dx="4">do</tspan></text>
+<text x="476.0" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">10</tspan><tspan dx="4">if</tspan></text>
+<text x="528.6" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">11</tspan><tspan dx="4">M</tspan></text>
+<text x="573.6" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">12</tspan><tspan dx="4">&gt;</tspan></text>
+<text x="618.6" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">13</tspan><tspan dx="4">N</tspan></text>
+<text x="663.6" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">14</tspan><tspan dx="4">then</tspan></text>
+<text x="732.8" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">15</tspan><tspan dx="4">M</tspan></text>
+<text x="777.8" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">16</tspan><tspan dx="4">:=</tspan></text>
+<text x="830.4" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">17</tspan><tspan dx="4">M</tspan></text>
+<text x="875.4" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">18</tspan><tspan dx="4">-</tspan></text>
+<text x="920.4" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">19</tspan><tspan dx="4">N</tspan></text>
+<text x="965.4" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">20</tspan><tspan dx="4">else</tspan></text>
+<text x="1034.6" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">21</tspan><tspan dx="4">N</tspan></text>
+<text x="1079.6" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">22</tspan><tspan dx="4">:=</tspan></text>
+<text x="1132.2" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">23</tspan><tspan dx="4">N</tspan></text>
+<text x="1177.2" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">24</tspan><tspan dx="4">-</tspan></text>
+<text x="1222.2" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">25</tspan><tspan dx="4">M</tspan></text>
+<text x="1267.2" y="847.0" font-size="13"><tspan fill="#df1717" font-weight="bold">26</tspan><tspan dx="4">end</tspan></text>
+<line x1="2285.0" y1="26" x2="2285.0" y2="881.0" stroke="#ddd"/>
+<text x="2307.0" y="42" font-size="16" font-weight="bold">SIPL source</text>
+<text x="2307.0" y="75.0" font-size="15">begin</text>
+<text x="2323.4" y="100.0" font-size="15">while ¬(M = N) do</text>
+<text x="2339.8" y="125.0" font-size="15">if M &gt; N then M := M - N else N := N - M</text>
+<text x="2307.0" y="150.0" font-size="15">end</text>
+</g></svg>

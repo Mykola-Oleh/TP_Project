@@ -1,0 +1,10 @@
+{
+  "id": "skip",
+  "source": "begin skip end",
+  "mode": "run",
+  "initial": {},
+  "expect": {
+    "state": {},
+    "steps": 1
+  }
+}

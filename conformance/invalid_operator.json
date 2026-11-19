@@ -1,0 +1,10 @@
+{
+  "id": "invalid_operator",
+  "source": "begin X := 2 / 3 end",
+  "mode": "error",
+  "initial": {},
+  "expect": {
+    "exit_code": 3,
+    "type": "SyntaxError"
+  }
+}

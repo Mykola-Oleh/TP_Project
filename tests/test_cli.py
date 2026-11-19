@@ -1,4 +1,3 @@
-"""CLI integration tests via actual subprocesses, not mocked function calls."""
 import json
 import os
 import subprocess

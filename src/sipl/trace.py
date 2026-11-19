@@ -1,4 +1,3 @@
-"""Structured, ordered execution events for debugger and visualization clients."""
 from collections.abc import Mapping
 from dataclasses import dataclass
 from . import ast

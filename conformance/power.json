@@ -1,0 +1,17 @@
+{
+  "id": "power",
+  "source": "begin\n  R := 1;\n  while Y > 0 do\n  begin\n    R := R * X;\n    Y := Y - 1\n  end\nend\n",
+  "mode": "run",
+  "initial": {
+    "X": 2,
+    "Y": 5
+  },
+  "expect": {
+    "state": {
+      "X": 2,
+      "Y": 0,
+      "R": 32
+    },
+    "steps": 17
+  }
+}

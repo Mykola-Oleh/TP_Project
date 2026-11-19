@@ -1,0 +1,13 @@
+{
+  "id": "sequence",
+  "source": "begin X := 3; Y := X * 2 end",
+  "mode": "run",
+  "initial": {},
+  "expect": {
+    "state": {
+      "X": 3,
+      "Y": 6
+    },
+    "steps": 2
+  }
+}
