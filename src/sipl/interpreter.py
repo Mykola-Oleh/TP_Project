@@ -1,7 +1,7 @@
 """Execution of the core SIPL language over integer-valued states."""
-from collections.abc import Mapping
+from collections.abc import Mapping, Callable
 from dataclasses import dataclass
-from sipl import ast
+from . import ast
 
 
 class ExecutionError(RuntimeError):
@@ -22,7 +22,8 @@ class ExecutionResult:
 
 
 class Interpreter:
-    def __init__(self, state: Mapping[str, int] | None = None, max_steps: int = 10000):
+    def __init__(self, state: Mapping[str, int] | None = None, max_steps: int = 10000,
+                 on_event: Callable[[dict], None] | None = None):
         if not isinstance(max_steps, int) or isinstance(max_steps, bool) or max_steps <= 0:
             raise ValueError("max_steps must be a positive integer")
         self.state = {}
@@ -34,6 +35,15 @@ class Interpreter:
             self.state[key] = value
         self.max_steps = max_steps
         self.steps = 0
+        self.on_event = on_event
+
+    def _emit(self, kind: str, node: ast.Statement, **details):
+        if self.on_event is not None:
+            self.on_event({"event": kind, "step": self.steps,
+                           "statement": type(node).__name__,
+                           "span": {"line": node.span.line, "column": node.span.column,
+                                    "end_line": node.span.end_line, "end_column": node.span.end_column},
+                           "state": dict(self.state), **details})
 
     def _tick(self, node: ast.Statement):
         if self.steps >= self.max_steps:
@@ -67,6 +77,7 @@ class Interpreter:
         raise ExecutionError("unsupported expression", node.span)
 
     def execute(self, node: ast.Statement):
+        # Structural blocks do not consume a step (same behavior as stage 2).
         if isinstance(node, ast.Block):
             for statement in node.statements:
                 self.execute(statement)
@@ -74,27 +85,40 @@ class Interpreter:
         if isinstance(node, ast.While):
             while True:
                 self._tick(node)
-                if not self.evaluate(node.condition):
+                self._emit("BeforeStatement", node)
+                result = bool(self.evaluate(node.condition))
+                self._emit("ConditionEvaluated", node, value=result)
+                self._emit("AfterStatement", node)
+                if not result:
                     return
                 self.execute(node.body)
         self._tick(node)
+        self._emit("BeforeStatement", node)
         if isinstance(node, ast.Assign):
             value = self.evaluate(node.value)
             if type(value) is not int:
                 raise ExecutionError("assignment requires an integer", node.span)
+            old_value = self.state.get(node.name)
             self.state[node.name] = value
+            self._emit("VariableChanged", node, variable=node.name,
+                       old_value=old_value, new_value=value)
         elif isinstance(node, ast.Skip):
-            return
+            pass
         elif isinstance(node, ast.If):
-            if self.evaluate(node.condition):
-                self.execute(node.then_branch)
-            else:
-                self.execute(node.else_branch)
+            result = bool(self.evaluate(node.condition))
+            self._emit("ConditionEvaluated", node, value=result)
+            self.execute(node.then_branch if result else node.else_branch)
         else:
             raise ExecutionError("unsupported statement", node.span)
+        self._emit("AfterStatement", node)
 
     def run(self, node: ast.Statement) -> ExecutionResult:
-        self.execute(node)
+        try:
+            self.execute(node)
+        except ExecutionError as exc:
+            self._emit("ExecutionFinished", node, status="error", error=str(exc))
+            raise
+        self._emit("ExecutionFinished", node, status="success")
         return ExecutionResult(dict(self.state), self.steps)
 
 

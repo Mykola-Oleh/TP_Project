@@ -4,11 +4,12 @@ import json
 from pathlib import Path
 from .parser import parse, ParseError
 from .interpreter import Interpreter, ExecutionError
+from .trace import trace_ast
 
 
 def main():
     ap = argparse.ArgumentParser(prog="sipl")
-    ap.add_argument("command", choices=["parse", "check", "run"])
+    ap.add_argument("command", choices=["parse", "check", "run", "trace"])
     ap.add_argument("file", type=Path)
     ap.add_argument("--var", action="append", default=[], metavar="NAME=INTEGER",
                     help="initial variable value; repeat as needed")
@@ -27,8 +28,11 @@ def main():
                 if not sep or not name.isidentifier():
                     raise ValueError(f"invalid --var {item!r}: expected NAME=INTEGER")
                 state[name] = int(value)
-            result = Interpreter(state, args.max_steps).run(tree)
-            print(json.dumps(dataclasses.asdict(result), ensure_ascii=False, indent=2, sort_keys=True))
+            if args.command == "trace":
+                output = dataclasses.asdict(trace_ast(tree, state, args.max_steps))
+            else:
+                output = dataclasses.asdict(Interpreter(state, args.max_steps).run(tree))
+            print(json.dumps(output, ensure_ascii=False, indent=2, sort_keys=True))
     except (ParseError, ExecutionError, OSError, ValueError) as exc:
         ap.exit(1, f"{exc}\n")
 
