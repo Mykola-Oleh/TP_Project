@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="725" viewBox="0 0 1320 725">
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial, sans-serif">
+<line x1="500.0" y1="83" x2="500.0" y2="145" stroke="#475569" stroke-width="1.5"/>
+<line x1="500.0" y1="188" x2="180.0" y2="250" stroke="#475569" stroke-width="1.5"/>
+<line x1="180.0" y1="293" x2="180.0" y2="355" stroke="#475569" stroke-width="1.5"/>
+<line x1="180.0" y1="398" x2="100" y2="460" stroke="#475569" stroke-width="1.5"/>
+<line x1="180.0" y1="398" x2="260" y2="460" stroke="#475569" stroke-width="1.5"/>
+<line x1="500.0" y1="188" x2="820.0" y2="250" stroke="#475569" stroke-width="1.5"/>
+<line x1="820.0" y1="293" x2="500.0" y2="355" stroke="#475569" stroke-width="1.5"/>
+<line x1="500.0" y1="398" x2="420" y2="460" stroke="#475569" stroke-width="1.5"/>
+<line x1="500.0" y1="398" x2="580" y2="460" stroke="#475569" stroke-width="1.5"/>
+<line x1="820.0" y1="293" x2="820.0" y2="355" stroke="#475569" stroke-width="1.5"/>
+<line x1="820.0" y1="398" x2="820.0" y2="460" stroke="#475569" stroke-width="1.5"/>
+<line x1="820.0" y1="503" x2="740" y2="565" stroke="#475569" stroke-width="1.5"/>
+<line x1="820.0" y1="503" x2="900" y2="565" stroke="#475569" stroke-width="1.5"/>
+<line x1="820.0" y1="293" x2="1140.0" y2="355" stroke="#475569" stroke-width="1.5"/>
+<line x1="1140.0" y1="398" x2="1140.0" y2="460" stroke="#475569" stroke-width="1.5"/>
+<line x1="1140.0" y1="503" x2="1060" y2="565" stroke="#475569" stroke-width="1.5"/>
+<line x1="1140.0" y1="503" x2="1220" y2="565" stroke="#475569" stroke-width="1.5"/>
+<rect x="444.0" y="45" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="500.0" y="70" text-anchor="middle" font-size="14" fill="#0f172a">Block</text>
+<rect x="444.0" y="150" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="500.0" y="175" text-anchor="middle" font-size="14" fill="#0f172a">While</text>
+<rect x="124.0" y="255" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="180.0" y="280" text-anchor="middle" font-size="14" fill="#0f172a">Unary: not</text>
+<rect x="124.0" y="360" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="180.0" y="385" text-anchor="middle" font-size="14" fill="#0f172a">Binary: =</text>
+<rect x="44.0" y="465" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="100" y="490" text-anchor="middle" font-size="14" fill="#0f172a">Variable: M</text>
+<rect x="204.0" y="465" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="260" y="490" text-anchor="middle" font-size="14" fill="#0f172a">Variable: N</text>
+<rect x="764.0" y="255" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="820.0" y="280" text-anchor="middle" font-size="14" fill="#0f172a">If</text>
+<rect x="444.0" y="360" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="500.0" y="385" text-anchor="middle" font-size="14" fill="#0f172a">Binary: &gt;</text>
+<rect x="364.0" y="465" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="420" y="490" text-anchor="middle" font-size="14" fill="#0f172a">Variable: M</text>
+<rect x="524.0" y="465" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="580" y="490" text-anchor="middle" font-size="14" fill="#0f172a">Variable: N</text>
+<rect x="764.0" y="360" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="820.0" y="385" text-anchor="middle" font-size="14" fill="#0f172a">Assign: M</text>
+<rect x="764.0" y="465" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="820.0" y="490" text-anchor="middle" font-size="14" fill="#0f172a">Binary: -</text>
+<rect x="684.0" y="570" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="740" y="595" text-anchor="middle" font-size="14" fill="#0f172a">Variable: M</text>
+<rect x="844.0" y="570" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="900" y="595" text-anchor="middle" font-size="14" fill="#0f172a">Variable: N</text>
+<rect x="1084.0" y="360" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="1140.0" y="385" text-anchor="middle" font-size="14" fill="#0f172a">Assign: N</text>
+<rect x="1084.0" y="465" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="1140.0" y="490" text-anchor="middle" font-size="14" fill="#0f172a">Binary: -</text>
+<rect x="1004.0" y="570" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="1060" y="595" text-anchor="middle" font-size="14" fill="#0f172a">Variable: N</text>
+<rect x="1164.0" y="570" width="112" height="40" rx="7" fill="#eff6ff" stroke="#2563eb"/>
+<text x="1220" y="595" text-anchor="middle" font-size="14" fill="#0f172a">Variable: M</text>
+</g></svg>

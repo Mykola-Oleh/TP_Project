@@ -5,6 +5,15 @@ import re
 import sys
 from pathlib import Path
 
+from lark import tree
+
+from .ast_visualize import (
+    ast_dict,
+    ast_text,
+    ast_dot,
+    ast_svg,
+    compare_svg,
+)
 from .interpreter import ExecutionError, Interpreter
 from .parser import ParseError, parse
 from .trace import trace_ast
@@ -54,6 +63,11 @@ def _parser():
             "svg",
             "derivation-dot",
             "derivation-svg",
+            "ast-text",
+            "ast-json",
+            "ast-dot",
+            "ast-svg",
+            "compare-svg",
         ],
         default="text",
         help="parse-tree visualization format (visualize only)"
@@ -185,8 +199,7 @@ def main(argv=None):
                 ensure_ascii=False,
                 indent=2,
                 sort_keys=True
-            )
-
+            ) 
         elif args.command == "visualize":
             concrete = parse_tree(source)
 
@@ -201,6 +214,25 @@ def main(argv=None):
                     concrete,
                     source
                 )
+
+            elif args.format == "ast-text":
+                rendered = ast_text(tree)
+
+            elif args.format == "ast-json":
+                rendered = json.dumps(
+                    ast_dict(tree),
+                    ensure_ascii=False,
+                    indent=2
+                )
+
+            elif args.format == "ast-dot":
+                rendered = ast_dot(tree)
+
+            elif args.format == "ast-svg":
+                rendered = ast_svg(tree)
+
+            elif args.format == "compare-svg":
+                rendered = compare_svg(source, tree)
 
             else:
                 renderers = {

@@ -141,4 +141,63 @@ py -m sipl.cli visualize examples/gcd.sipl --format derivation-dot --output deri
 
 Звичайні формати `text`, `json`, `dot`, `svg` також залишаються доступними.
 
+## Етап 6 — VIS-02 + REL-01 (1.5 бала)
 
+## VIS-02 — Parse Tree vs AST
+
+VIS-02 додає незалежну візуалізацію абстрактного синтаксичного дерева (AST).
+
+На відміну від конкретного дерева синтаксичного розбору (Parse Tree), AST відображає основні семантичні конструкції програми (Block, Assign, Binary, If, While тощо), пропускаючи граматичні роздільники та допоміжні нетермінали.
+
+```powershell
+py -m sipl.cli visualize examples/gcd.sipl --format ast-svg --output ast.svg
+py -m sipl.cli visualize examples/gcd.sipl --format compare-svg --output comparison.svg
+py -m sipl.cli visualize examples/gcd.sipl --format ast-text
+py -m sipl.cli visualize examples/gcd.sipl --format ast-json
+py -m sipl.cli visualize examples/gcd.sipl --format ast-dot --output ast.dot
+py -m pytest -v
+```
+
+### Особливості реалізації
+* ast-svg — побудова AST у форматі SVG.
+* ast-text — текстове представлення AST.
+* ast-json — представлення AST у форматі JSON.
+* ast-dot — експорт AST у форматі DOT.
+* compare-svg — відображення дерева синтаксичного виводу та AST поруч в одному SVG.
+
+SVG-файли є самодостатніми та не потребують встановлення Graphviz. За потреби файл ast-dot можна окремо візуалізувати за допомогою Graphviz.
+
+## REL-01 — GitHub Actions CI
+
+Workflow .github/workflows/ci.yml автоматично запускається після надсилання змін до репозиторію (push) та створення або оновлення Pull Request.
+
+### Автоматичні перевірки
+1. Тестування Python - запуск автоматичних тестів на Python 3.10, 3.12 та 3.13.
+2. Conformance suite - перевірка відповідності реалізації SIPL заданим тестовим сценаріям.
+3. Lint - перевірка коду на поширені помилки та проблеми стилю.
+4. Type-check - базова перевірка типів за допомогою mypy.
+5. Build - перевірка успішного створення Python-пакета у форматах wheel та source distribution.
+
+### Перегляд результатів
+
+Для перегляду результатів автоматичних перевірок необхідно:
+1. Відкрити репозиторій проєкту на GitHub.
+2. Перейти на вкладку Actions.
+3. Обрати workflow SIPL CI.
+4. Переглянути результати виконання перевірок.
+5. Локальний запуск перевірок
+
+Встановлення проєкту та залежностей для розробки:
+```powershell
+py -m pip install -e ".[dev]"
+```
+
+Запуск автоматичних тестів:
+```powershell 
+py -m pytest -v
+```
+
+Запуск незалежного набору перевірок SIPL:
+```powershell 
+py conformance/run_suite.py
+```
