@@ -5,6 +5,8 @@ from pathlib import Path
 from lark import Lark, Tree, Token
 from lark.exceptions import UnexpectedInput
 from .parser import ParseError
+from dataclasses import dataclass
+from html import escape as html_escape
 
 _GRAMMAR = Path(__file__).with_name("grammar.lark")
 _PARSER = Lark(_GRAMMAR.read_text(encoding="utf-8"), parser="lalr", propagate_positions=True, keep_all_tokens=True)
@@ -72,9 +74,6 @@ def to_svg(tree):
     if result.returncode:
         raise RuntimeError(result.stderr.strip() or "Graphviz failed")
     return result.stdout
-
-from dataclasses import dataclass
-from html import escape as html_escape
 
 @dataclass
 class DerivationNode:
